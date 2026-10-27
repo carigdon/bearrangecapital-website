@@ -1,117 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Bear Range Capital</title>
-<link rel="shortcut icon" href="images/BRCicon.ico">
-<meta http-equiv="content-type" content="text/html; charset=utf-8" >
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="refresh" content="10;URL=home.html">
-<style type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Investor login · Bear Range Capital</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f6f4ef">
 
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
+  <meta property="og:title" content="Investor login · Bear Range Capital">
+  <meta property="og:image" content="https://bearrangecapital.com/images/og.png">
 
-body {
-  /*background: linear-gradient(90deg, white, gray);*/
-  background-color: #eee;
-}
-
-body, h1, h2 p {
-  font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.container {
-  margin-left:  auto;
-  margin-right:  auto;
-  margin-top: 00px;
-  max-width: 1170px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.row:before, .row:after {
-  display: table;
-  content: " ";
-}
-
-h1 {
-  font-size: 15px;
-  font-weight: 200;
-  margin: 100px 0 10px 0;
-  text-align: center;
-}
-
-.lead {
-  font-size: 20px;
-  font-weight: 200;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 15px;
-  font-weight: 200;
-  margin: auto;
-  text-align: center;
-  color: red
-}
-
-input.text, input.search, textarea.textarea {
-	border-radius: 7px;
-	border-width: 1px
-}
-
-input.btn {
-	border-radius: 7px;
-	border-width: 1px
-}
-
-
-h3 {
-  font-size: 15px;
-  font-weight: 200;
-  margin: 0 0 10px 0;
-  text-align: center;
-}
-
-p {
-  margin: 0 0 10px;
-}
-
-a {
-  color: #000000;
-  text-decoration: none;
-}
-</style>
+  <link rel="preload" href="/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
 </head>
-
 <body>
-<div class="container text-center" id="error">
+  <main class="portal">
+    <div class="card">
+      <div class="card-head">
+        <a href="/" aria-label="Bear Range Capital home">
+          <img class="logo" src="/images/logo.png" width="434" height="410" alt="">
+          <p class="name">Bear Range Capital</p>
+        </a>
+        <h1>Investor login</h1>
+        <p class="subtitle">Sign in to view your account.</p>
+      </div>
 
+      <!--
+        This sign-in is a placeholder: nothing is checked or sent anywhere.
+        The fields have no "name", so even without JavaScript the browser
+        submits nothing and simply opens the "invalid" page.
+      -->
+      <form id="login" action="/invalid" method="get" novalidate>
+        <p class="alert" id="login-error" role="alert">Invalid email or password.</p>
 
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+        </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      
-      </br>
-      <h1><a href="home.html"><img src="images/BRCLogoTransparent.png" alt="BRC Logo" style="width:200px;" align="center"></br>BEAR RANGE CAPITAL</a></h1>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="off" required>
+        </div>
 
+        <button class="button" type="submit">Sign in</button>
+      </form>
 
-	<h2>    
-		<br>
-		<br>
-		Invalid username or password
-                <br>
-                <br>
-	</h2>
-
+      <p class="help">Need access? Contact <a href="mailto:info@bearrangecapital.com">info@bearrangecapital.com</a></p>
     </div>
-    
-  </div>
 
-</div>
+    <a class="back-link" href="/">&larr; Back to Bear Range Capital</a>
+  </main>
 
+  <footer class="footer">&copy; <span data-year>2026</span> Bear Range Capital</footer>
+
+  <script>
+    document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+    (function () {
+      var form = document.getElementById('login');
+      var email = document.getElementById('email');
+      var password = document.getElementById('password');
+      var error = document.getElementById('login-error');
+      var button = form.querySelector('button');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        error.hidden = true;
+
+        if (!email.value.trim() || !password.value) {
+          error.textContent = 'Enter your email and password.';
+          error.hidden = false;
+          (email.value.trim() ? password : email).focus();
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = 'Signing in…';
+
+        setTimeout(function () {
+          button.disabled = false;
+          button.textContent = 'Sign in';
+          error.textContent = 'Invalid email or password.';
+          error.hidden = false;
+          password.value = '';
+          password.focus();
+        }, 900);
+      });
+    })();
+  </script>
 </body>
 </html>

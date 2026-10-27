@@ -1,120 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Bear Range Capital</title>
-<link rel="shortcut icon" href="images/BRCicon.ico">
-<meta http-equiv="content-type" content="text/html; charset=utf-8" >
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style type="text/css">
-body {
-  /*background: linear-gradient(90deg, white, gray);*/
-  background-color: #eee;
-}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bear Range Capital</title>
+  <meta name="description" content="Bear Range Capital is a private investment firm. Contact info@bearrangecapital.com.">
+  <meta name="theme-color" content="#f6f4ef">
+  <link rel="canonical" href="https://bearrangecapital.com/">
 
-body, h1, h2 p {
-  font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
-.container {
-  /*margin-left:  auto;*/
-  /*margin-right:  auto;*/
-  margin-top: 30px;
-  /*max-width: 1170px;
-  padding-right: 15px;
-  padding-left: 15px;*/
-  width: 100%;
-}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bear Range Capital">
+  <meta property="og:title" content="Bear Range Capital">
+  <meta property="og:description" content="Private investment firm.">
+  <meta property="og:url" content="https://bearrangecapital.com/">
+  <meta property="og:image" content="https://bearrangecapital.com/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bear Range Capital logo: a tree and a bear inside a circle">
+  <meta name="twitter:card" content="summary_large_image">
 
-/*.row:before, .row:after {
-  display: table;
-  content: " ";
-}*/
-
-.row {
-  width: 100%;
-  text-align: center;
-  margin: auto;
-}
-
-.row2 {
-  max-width: 600px;
-  text-align: center;
-  margin: auto;
-}
-
-.row3 {
-  margin-right: 20px;
-  width: 100%;
-  float: right;
-  text-indent: 20px;
-}
-
-img {
-  margin: auto;
-  padding: 0px;
-  max-width: 100%;
-  height: auto;
-  width: auto\9; /* ie8 */
-}
-
-h1 {
-  font-size: 80px;
-  font-weight: 500;
-  margin: 0 auto 10px auto;
-  text-align: center;
-  width: 100%;
-}
-
-.lead {
-  font-size: 21px;
-  font-weight: 200;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 30px;
-  font-weight: 200;
-  margin: 0 0 10px 20px;
-  text-align: center;
-}
-
-
-h3 {
-  font-size: 15px;
-  font-weight: 200;
-  text-align: right;
-}
-
-p {
-  margin: 0 0 10px;
-}
-
-a {
-  color: #000000;
-  text-decoration: underline;
-}
-</style>
+  <link rel="preload" href="/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
 </head>
-
 <body>
-<div class="container text-center" id="error">
+  <header class="topbar">
+    <a href="/investors">Investor login<span class="arrow" aria-hidden="true">&rarr;</span></a>
+  </header>
 
+  <main class="hero">
+    <img class="logo" src="/images/logo.png" width="434" height="410" alt="Bear Range Capital logo: a tree and a bear inside a circle">
+    <h1 class="wordmark">Bear Range Capital</h1>
+    <hr class="rule">
+    <p class="tagline">Private investment firm</p>
+    <a class="email" href="mailto:info@bearrangecapital.com">info@bearrangecapital.com</a>
+  </main>
 
+  <footer class="footer">&copy; <span data-year>2026</span> Bear Range Capital</footer>
 
-  <div class="row">
-    <div class="row2">
-      <div class="row3"><h3><a href="/investors.html">Investor Login</a></h3></div>
-      <h1>BEAR RANGE CAPITAL</h1>
-      <img src="images/BRCLogoTransparent.png" alt="BRC Logo">
-      <h2>info@bearrangecapital.com</h2>
-    </div>
-  </div>
-
-</div>
-
+  <script>
+    document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+  </script>
 </body>
 </html>
