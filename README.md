@@ -4,11 +4,11 @@ Static landing page for Bear Range Capital, hosted on Vercel. There is no build 
 
 ## Pages
 - `index.html` – the homepage (logo, name, tagline, email)
-- `investors.html` – investor login. **A placeholder**: nothing is checked or sent anywhere; every attempt shows "Invalid email or password".
+- `partners.html` – partner login. **A placeholder**: nothing is checked or sent anywhere; every attempt shows "Invalid email or password".
 - `invalid.html` – the same login with the error showing (used if JavaScript is off, and for old links)
 - `404.html` – page not found
 
-`vercel.json` serves pages without `.html` (`/investors`), sends the old `/home.html` to `/`, and adds basic security headers.
+`vercel.json` serves pages without `.html` (`/partners`; old `/investors` links redirect there), sends the old `/home.html` to `/`, and adds basic security headers.
 
 ## Files
 - `styles.css` – all styling (colours at the top under `:root`)
