@@ -162,6 +162,35 @@ img {
   background: var(--rule);
 }
 
+.established {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 26px 0 22px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}
+
+.established::before,
+.established::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: var(--rule);
+}
+
+/* letter-spacing leaves space after the last letter; trim it so the lines sit evenly */
+.established span {
+  margin-right: -0.24em;
+}
+
 .tagline {
   margin: 0 0 14px;
   font-size: 13px;

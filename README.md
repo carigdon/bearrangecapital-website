@@ -12,6 +12,7 @@ Static landing page for Bear Range Capital, hosted on Vercel. There is no build 
 
 ## Files
 - `styles.css` – all styling (colours at the top under `:root`)
+- `site.js` – footer year, and the email address (assembled in the browser so it is not in the HTML for spam bots)
 - `fonts/` – Cormorant Garamond and Inter, self-hosted (SIL Open Font License, see the LICENSE files)
 - `images/logo.png` – the logo, pure black on transparent
 - `images/BRCLogoTransparent.png` – the original logo file, kept as the source

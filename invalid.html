@@ -50,7 +50,7 @@
         <button class="button" type="submit">Sign in</button>
       </form>
 
-      <p class="help">Need access? Contact <a href="mailto:info@bearrangecapital.com">info@bearrangecapital.com</a></p>
+      <p class="help">Need access? Contact <a data-email>info [at] bearrangecapital [dot] com</a></p>
     </div>
 
     <a class="back-link" href="/">&larr; Back to Bear Range Capital</a>
@@ -58,9 +58,8 @@
 
   <footer class="footer">&copy; <span data-year>2026</span> Bear Range Capital</footer>
 
+  <script src="/site.js"></script>
   <script>
-    document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
-
     (function () {
       var form = document.getElementById('login');
       var email = document.getElementById('email');
